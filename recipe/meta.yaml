@@ -1,5 +1,5 @@
 {% set name = "formulaic" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5b6a0336bafbf0127ee3c8ee61a91272144cbf9564e11459961e73911589cd84
+  sha256: 15b71ea8972fb451f80684203cddd49620fc9ed5c2e35f31e0874e9c41910d1a
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -37,7 +37,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A high-performance implementation of Wilkinson formulas for Python.'
+  summary: A high-performance implementation of Wilkinson formulas for Python.
   description: |
     Formulaic is a high-performance implementation of Wilkinson formulas for Python.
   doc_url: https://matthewwardrop.github.io/formulaic
