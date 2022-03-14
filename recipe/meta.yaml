@@ -1,5 +1,5 @@
 {% set name = "formulaic" %}
-{% set version = "0.2.4" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 15b71ea8972fb451f80684203cddd49620fc9ed5c2e35f31e0874e9c41910d1a
+  sha256: cdc9e90dc8d9fd01c662ca30d603a6326e0b40f777b9ccdf118f52456db33352
 
 build:
   noarch: python
@@ -16,17 +16,20 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setupmeta
   run:
-    - python >=3.6
-    - astor
+    - python >=3.7
+    - astor >=0.7
     - interface_meta >=1.2
-    - numpy
-    - pandas
-    - scipy
-    - wrapt
+    - numpy >=1.3
+    - pandas >=1.2
+    - scipy >=1.6
+    - wrapt >=1.0
+  run_constrained:
+    - pyarrow >=1
+    - sympy >=1.3,<1.10
 
 test:
   imports:
