@@ -1,5 +1,5 @@
 {% set name = "formulaic" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3e16262562147acbdeda1178d778ac189a93bd63e2348261bd8b5d303f173f6d
+  sha256: e728f1be7363d06f68c066140ab762d7cdd95e5cd4daba3cbe6b0f40449a082e
 
 build:
   noarch: python
@@ -16,11 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.7.1
     - pip
-    - setupmeta
+    - poetry
+    - poetry-dynamic-versioning
   run:
-    - python >=3.7
+    - python >=3.7.1
     - astor >=0.7
     - interface_meta >=1.2
     - numpy >=1.3
