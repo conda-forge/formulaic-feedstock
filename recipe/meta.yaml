@@ -33,7 +33,7 @@ requirements:
     - wrapt >=1.0
   run_constrained:
     - pyarrow >=1
-    - sympy >=1.3,<1.10
+    - sympy >=1.3,!=1.10
 
 test:
   imports:
