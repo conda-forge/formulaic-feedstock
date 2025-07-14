@@ -10,17 +10,18 @@ source:
   sha256: ab5c43a5b107d1b1e87f55cf0a01245531cce793d3dcab433dae12053c3cb2d6
 
 build:
+  skip: True  # [py < 39]
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python
     - pip
     - hatchling
     - hatch-vcs
   run:
-    - python >={{ python_min }}
+    - python
     - interface_meta >=1.2
     - narwhals >=1.17
     - numpy >=1.20
