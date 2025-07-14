@@ -1,5 +1,5 @@
 {% set name = "formulaic" %}
-{% set version = "1.1.1" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ddf80e4bef976dd99698aa27512015276c7b86c314b601ae6fd360c7741b7231
+  sha256: ab5c43a5b107d1b1e87f55cf0a01245531cce793d3dcab433dae12053c3cb2d6
 
 build:
   noarch: python
