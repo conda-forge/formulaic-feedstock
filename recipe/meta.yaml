@@ -16,7 +16,7 @@ build:
 
 requirements:
   host:
-    - python >={{ python_min }}
+    - python {{ python_min }}
     - pip
     - hatchling
     - hatch-vcs
@@ -29,7 +29,6 @@ requirements:
     - scipy >=1.6
     - typing-extensions >=4.2
     - wrapt >=1.17
-    - typing-extensions >=4.2
   run_constrained:
     - polars >=1
     - pyarrow >=1
