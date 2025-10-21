@@ -10,7 +10,6 @@ source:
   sha256: dc79476baa2d811b35798893eb2f2c1e51edee8d7a9c1429b400e56f4e0beccc
 
 build:
-  skip: true  # [py < 39]
   number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
@@ -22,7 +21,7 @@ requirements:
     - hatchling
     - hatch-vcs
   run:
-    - python
+    - python >={{ python_min }}
     - interface_meta >=1.2
     - narwhals >=1.17
     - numpy >=1.20
